@@ -1,0 +1,6 @@
+[submodule "blog"]
+	path = blog
+	url = https://github.com/SujalChoudhari/blog
+[submodule "portfolio"]
+	path = portfolio
+	url = https://github.com/SujalChoudhari/PortfolioNew
