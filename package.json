@@ -1,0 +1,12 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "description": "mono repo goes brrr",
+  "main": "index.js",
+  "scripts": {
+    "search": "node scripts/copy_post_to_search_content.js",
+    "blog": "node scripts/copy_post_to_blog.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
