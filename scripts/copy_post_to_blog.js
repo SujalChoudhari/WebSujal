@@ -1,9 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const srcDir = path.resolve(__dirname, "..", 'content');
-const destDir = path.resolve(__dirname, "..", "blog", "src", "content", "posts");
+// Define source and destination directories
+const blogSrcDir = path.resolve(__dirname, "..", "content", "blog");
+const imagesSrcDir = path.resolve(__dirname, "..", "content", "images");
 
+const blogDestDir = path.resolve(__dirname, "..", "blog", "src", "content", "posts");
+const imagesDestDir = path.resolve(__dirname, "..", "blog", "public", "images", "posts");
+
+// Function to copy files and directories recursively
 function copyFiles(src, dest) {
     if (!fs.existsSync(dest)) {
         fs.mkdirSync(dest, { recursive: true });
@@ -23,4 +28,10 @@ function copyFiles(src, dest) {
     }
 }
 
-copyFiles(srcDir, destDir);
+// Copy blog content
+copyFiles(blogSrcDir, blogDestDir);
+
+// Copy images
+copyFiles(imagesSrcDir, imagesDestDir);
+
+console.log("Blog content and images have been copied successfully!");
