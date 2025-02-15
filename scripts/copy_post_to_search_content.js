@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const srcDir = path.resolve(__dirname, "..", "content");
+const srcDir = path.resolve(__dirname, "..", "content", "blog");
 const destDir = path.resolve(__dirname, '..', 'portfolio', 'src', 'lib', 'content');
 
 if (!fs.existsSync(destDir)) {
