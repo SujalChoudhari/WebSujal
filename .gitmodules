@@ -4,3 +4,6 @@
 [submodule "portfolio"]
 	path = portfolio
 	url = https://github.com/SujalChoudhari/PortfolioNew
+[submodule "roastresume"]
+	path = roastresume
+	url = https://github.com/SujalChoudhari/ResumeRoast
