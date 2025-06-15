@@ -7,3 +7,6 @@
 [submodule "roastresume"]
 	path = roastresume
 	url = https://github.com/SujalChoudhari/ResumeRoast
+[submodule "art-gallery"]
+	path = art-gallery
+	url = https://github.com/SujalChoudhari/ArtGallery
