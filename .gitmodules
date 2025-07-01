@@ -10,3 +10,10 @@
 [submodule "art-gallery"]
 	path = art-gallery
 	url = https://github.com/SujalChoudhari/ArtGallery
+[submodule "fs"]
+	path = fs
+	url = https://github.com/SujalChoudhari/fs
+	
+[submodule "repo-tracker"]
+	path = repo-tracker
+	url = https://github.com/SujalChoudhari/GHRepoTracker
