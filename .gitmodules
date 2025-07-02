@@ -14,6 +14,3 @@
 	path = fs
 	url = https://github.com/SujalChoudhari/fs
 	
-[submodule "repo-tracker"]
-	path = repo-tracker
-	url = https://github.com/SujalChoudhari/GHRepoTracker
