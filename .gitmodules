@@ -13,4 +13,6 @@
 [submodule "fs"]
 	path = fs
 	url = https://github.com/SujalChoudhari/fs
-	
+[submodule "tango"]
+	path = tango
+	url = https://github.com/SujalChoudhari/Tango
