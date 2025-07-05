@@ -13,6 +13,6 @@
 [submodule "fs"]
 	path = fs
 	url = https://github.com/SujalChoudhari/fs
-[submodule "RabbitRSS"]
+[submodule "rabbit-rss"]
 	path = rabbit-rss
 	url = https://github.com/SujalChoudhari/RabbitRSS
