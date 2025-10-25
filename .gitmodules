@@ -4,9 +4,6 @@
 [submodule "portfolio"]
 	path = portfolio
 	url = https://github.com/SujalChoudhari/PortfolioNew
-[submodule "roastresume"]
-	path = roastresume
-	url = https://github.com/SujalChoudhari/ResumeRoast
 [submodule "art-gallery"]
 	path = art-gallery
 	url = https://github.com/SujalChoudhari/ArtGallery
@@ -16,3 +13,6 @@
 [submodule "rabbit-rss"]
 	path = rabbit-rss
 	url = https://github.com/SujalChoudhari/RabbitRSS
+[submodule "resumeredo"]
+	path = resumeredo
+	url = https://github.com/SujalChoudhari/ResumeRoast2
