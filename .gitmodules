@@ -16,3 +16,6 @@
 [submodule "resumeredo"]
 	path = resumeredo
 	url = https://github.com/SujalChoudhari/ResumeRoast2
+[submodule "sujalcorp"]
+	path = sujalcorp
+	url = https://github.com/SujalChoudhari/sujalcorp
