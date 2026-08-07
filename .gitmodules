@@ -3,7 +3,7 @@
 	url = https://github.com/SujalChoudhari/blog
 [submodule "portfolio"]
 	path = portfolio
-	url = https://github.com/SujalChoudhari/PortfolioNew
+	url = https://github.com/SujalChoudhari/FinalPortfolio.git
 [submodule "art-gallery"]
 	path = art-gallery
 	url = https://github.com/SujalChoudhari/ArtGallery
