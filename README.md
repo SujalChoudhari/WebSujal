@@ -5,9 +5,7 @@
 **Private portfolio of personal web applications**
 
 [![Astro](https://img.shields.io/badge/Blog-Astro%205.15-ff6900?logo=astro)](blog/README.md)
-[![Next.js](https://img.shields.io/badge/Portfolio-Next.js%2014-black?logo=nextdotjs)](portfolio/README.md)
-[![Vite](https://img.shields.io/badge/ResumeRoast-React%2019%20%2B%20Vite-blue?logo=react)](resumeredo/README.md)
-[![Next.js](https://img.shields.io/badge/Rabbit%20RSS-Next.js%2015-000?logo=nextdotjs)](rabbit-rss/README.md)
+[![Vite](https://img.shields.io/badge/Portfolio-Vite%20%2B%20React-blue?logo=vite)](portfolio/README.md)
 [![AI](https://img.shields.io/badge/SujalCorp-Next.js%2015%20%2B%20AI-9cf?logo=google)](sujalcorp/README.md)
 [![Next.js](https://img.shields.io/badge/Art%20Gallery-Showcase-pink?logo=vercel)](art-gallery/README.md)
 
@@ -36,7 +34,7 @@ Private monorepo containing my personal web applications. Each project is a **Gi
 - ✅ Independent dependency management
 - ✅ Clean separation of concerns
 
-**⚠️ Private Repository**: All submodules are private. Do not expose API keys or sensitive data.
+**⚠️ Repository visibility varies by project**: Do not expose API keys or sensitive data.
 
 ---
 
@@ -45,11 +43,10 @@ Private monorepo containing my personal web applications. Each project is a **Gi
 | Project | Framework | Purpose | Port |
 |---------|-----------|---------|------|
 | **Blog** | Astro 5 + React | Personal blog with MDX, search, SEO | 4321 |
-| **Portfolio** | Next.js 14 + Nextra | Portfolio site with integrated docs | 3000 |
-| **ResumeRoast** | Vite + React 19 | AI resume analyzer (Gemini) | 5173 |
-| **Rabbit RSS** | Next.js 15 | RSS feed reader with notifications | 3000 |
+| **Portfolio** | Vite + React | Personal portfolio and identity hub | — |
 | **SujalCorp** | Next.js 15 + AI | Google AI Studio applet | 3000 |
 | **Art Gallery** | Next.js | Interactive art showcase | 3000 |
+| **FileShare** | Next.js | Anonymous file-sharing application | 3000 |
 
 ---
 
@@ -63,10 +60,8 @@ Private monorepo containing my personal web applications. Each project is a **Gi
 - Framer Motion / Motion
 
 **Specialized:**
-- **AI Integration**: `@google/genai` (ResumeRoast, SujalCorp)
-- **Search**: Fuse.js (Blog), Natural + Nextra (Portfolio)
-- **RSS**: `rss-parser` (Rabbit RSS)
-- **Virtualization**: `@tanstack/react-virtual` (Rabbit RSS)
+- **AI Integration**: `@google/genai` (SujalCorp)
+- **Search**: Fuse.js (Blog)
 
 ---
 
@@ -84,7 +79,7 @@ git submodule update --init --recursive
 
 # 3. Install dependencies for all projects
 ./scripts/install-all.sh  # or manually:
-for d in blog portfolio resumeredo rabbit-rss sujalcorp art-gallery; do
+for d in blog portfolio sujalcorp art-gallery fs; do
   cd "$d" && npm install && cd ..
 done
 ```
@@ -97,8 +92,7 @@ done
 
 # Or individually:
 cd blog && npm run dev      # → http://localhost:4321
-cd portfolio && npm run dev # → http://localhost:3000
-cd resumeredo && npm run dev # → http://localhost:5173
+cd portfolio && npm run dev
 # ... etc
 ```
 
@@ -116,7 +110,7 @@ npm run search # Generates portfolio/src/lib/content/allContent.ts
 
 ```bash
 # Enter each submodule and pull latest
-for d in blog portfolio resumeredo rabbit-rss sujalcorp art-gallery; do
+for d in blog portfolio sujalcorp art-gallery fs; do
   cd "$d" && git pull && cd ..
 done
 
@@ -144,12 +138,11 @@ git commit -m "Update submodules"
 
 | Project | Platform | Domain |
 |---------|----------|--------|
-| Blog | Netlify | https://sujal.xyz |
-| Portfolio | Vercel | https://sujal.xyz/portfolio |
-| ResumeRoast | Vercel | https://resumeroast.sujal.xyz |
-| Rabbit RSS | Vercel | https://rabbit.sujal.xyz |
-| SujalCorp | AI Studio | Embedded in Google AI Studio |
+| Blog | Netlify | https://blog.sujal.xyz |
+| Portfolio | Vercel | https://sujal.xyz |
+| SujalCorp | Vercel | https://corp.sujal.xyz |
 | Art Gallery | Vercel | https://art.sujal.xyz |
+| FileShare | Vercel | https://fs.sujal.xyz |
 
 **Note**: Deployments are configured individually in each project's hosting platform.
 
@@ -158,7 +151,7 @@ git commit -m "Update submodules"
 ## ⚠️ Notes
 
 ### Environment Variables
-- **ResumeRoast & SujalCorp** require `GEMINI_API_KEY` in `.env.local`
+- **SujalCorp** requires `GEMINI_API_KEY` in `.env.local`
 - Never commit `.env.local` files (already in `.gitignore`)
 
 ### Port Conflicts
