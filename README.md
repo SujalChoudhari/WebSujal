@@ -76,7 +76,7 @@ cd WebSujal
 git submodule update --init --recursive
 
 # 3. Install dependencies for all projects
-./scripts/install-all.sh  # or manually:
+# Install each maintained project manually:
 for d in blog portfolio sujalcorp art-gallery fs; do
   cd "$d" && npm install && cd ..
 done
@@ -85,10 +85,7 @@ done
 ### Daily Development
 
 ```bash
-# Start all projects in development mode
-./scripts/dev-all.sh
-
-# Or individually:
+# Start maintained projects individually:
 cd blog && npm run dev      # → http://localhost:4321
 cd portfolio && npm run dev
 # ... etc
