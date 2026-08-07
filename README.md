@@ -19,7 +19,6 @@
 - [🗂️ Projects](#️-projects)
 - [🛠️ Tech Stack](#️-tech-stack)
 - [🔧 Maintenance](#-maintenance)
-- [📜 Scripts](#-scripts)
 - [🌐 Deployments](#-deployments)
 - [⚠️ Notes](#️-notes)
 
@@ -30,7 +29,6 @@
 Private monorepo containing my personal web applications. Each project is a **Git submodule** with independent versioning, deployments, and configurations. This structure allows:
 
 - ✅ Isolated development and deployments
-- ✅ Shared content and utility scripts
 - ✅ Independent dependency management
 - ✅ Clean separation of concerns
 
@@ -96,16 +94,6 @@ cd portfolio && npm run dev
 # ... etc
 ```
 
-### Content Management
-
-```bash
-# After adding new blog posts (content/blog/*.mdx)
-npm run blog   # Syncs to blog/src/content/posts/
-
-# After updating blog content for portfolio search
-npm run search # Generates portfolio/src/lib/content/allContent.ts
-```
-
 ### Updating Submodules
 
 ```bash
@@ -118,19 +106,6 @@ done
 git add .
 git commit -m "Update submodules"
 ```
-
----
-
-## 📜 Scripts
-
-**Root Level** (`package.json`):
-- `npm run blog` → Syncs blog content from `content/` to blog project
-- `npm run search` → Updates portfolio search index
-
-**Helper Scripts** (create these):
-- `scripts/install-all.sh` - Installs dependencies across all projects
-- `scripts/dev-all.sh` - Starts all dev servers concurrently
-- `scripts/build-all.sh` - Builds all projects for production
 
 ---
 
@@ -177,7 +152,6 @@ git commit -m "Update <submodule> to latest"
 ### Backup Strategy
 - Each submodule is independently backed up in its own repository
 - The monorepo only tracks submodule commits (pointers)
-- Content in `content/` should be backed up separately if not already versioned
 
 ---
 
